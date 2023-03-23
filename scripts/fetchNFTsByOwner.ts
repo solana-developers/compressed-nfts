@@ -32,7 +32,7 @@ dotenv.config();
   const userAddress: PublicKey = keys.userAddress;
 
   console.log("==== Local PublicKeys loaded ====");
-  console.log("Test address:", userAddress.toBase58());
+  console.log("Test address:", testWallet.toBase58());
   console.log("User address:", userAddress.toBase58());
 
   //////////////////////////////////////////////////////////////////////////////
