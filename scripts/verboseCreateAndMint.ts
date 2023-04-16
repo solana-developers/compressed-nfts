@@ -80,7 +80,7 @@ let initBalance: number, balance: number;
   const CLUSTER_URL = process.env.RPC_URL ?? clusterApiUrl("devnet");
 
   // create a new rpc connection, using the ReadApi wrapper
-  const connection = new WrapperConnection(CLUSTER_URL);
+  const connection = new WrapperConnection(CLUSTER_URL, "confirmed");
 
   //////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////
@@ -126,11 +126,11 @@ let initBalance: number, balance: number;
   //////////////////////////////////////////////////////////////////////////////
 
   /*
-    For demonstration purposes, we can compute how much space our tree will 
-    need to allocate to store all the records. As well as the cost to allocate 
+    For demonstration purposes, we can compute how much space our tree will
+    need to allocate to store all the records. As well as the cost to allocate
     this space (aka minimum balance to be rent exempt)
     ---
-    NOTE: These are performed automatically when using the `createAllocTreeIx` 
+    NOTE: These are performed automatically when using the `createAllocTreeIx`
     function to ensure enough space is allocated, and rent paid.
   */
 
