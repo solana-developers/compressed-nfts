@@ -58,7 +58,7 @@ let initBalance: number, balance: number;
   const CLUSTER_URL = process.env.RPC_URL ?? clusterApiUrl("devnet");
 
   // create a new rpc connection, using the ReadApi wrapper
-  const connection = new WrapperConnection(CLUSTER_URL);
+  const connection = new WrapperConnection(CLUSTER_URL, "confirmed");
 
   // get the payer's starting balance (only used for demonstration purposes)
   initBalance = await connection.getBalance(payer.publicKey);
