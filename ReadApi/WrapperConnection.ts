@@ -203,9 +203,8 @@ export class WrapperConnection extends Connection {
       throw new ReadApiError(
         "Pagination Error. Only one pagination parameter supported per query.",
       );
-    // a pagination method MUST be selected
-    if (typeof page == "number" || before || after)
-      throw new ReadApiError("Pagination Error. No Pagination Method Selected.");
+
+    // a pagination method MUST be selected, but we are defaulting to using `page=0`
 
     const { result } = await this.callReadApi<GetAssetsByGroupRpcInput, ReadApiAssetList>({
       method: "getAssetsByGroup",
@@ -239,9 +238,8 @@ export class WrapperConnection extends Connection {
       throw new ReadApiError(
         "Pagination Error. Only one pagination parameter supported per query.",
       );
-    // a pagination method MUST be selected
-    if (typeof page == "number" || before || after)
-      throw new ReadApiError("Pagination Error. No Pagination Method Selected.");
+
+    // a pagination method MUST be selected, but we are defaulting to using `page=0`
 
     const { result } = await this.callReadApi<GetAssetsByOwnerRpcInput, ReadApiAssetList>({
       method: "getAssetsByOwner",
