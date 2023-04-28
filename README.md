@@ -13,6 +13,13 @@ million NFT collection:
 - compressed NFTs:
   - 1 million NFTs ~= 5 SOL
 
+## Quick links to learn more
+
+- Solana Docs for [State Compression](https://edge.docs.solana.com/learn/state-compression)
+- written guide
+  [minting compressed NFTs](https://edge.docs.solana.com/developing/guides/compressed-nfts) (which
+  is based on this repo and also in the Solana Docs)
+
 ## Tech stack of this repo
 
 - uses TypeScript and NodeJS
@@ -86,6 +93,10 @@ Mint additional compressed NFTs into an already existing collection and/or tree.
 
 ## Resources on State Compression and Compressed NFTS
 
+- Solana Docs:
+  - [State Compression](https://edge.docs.solana.com/learn/state-compression)
+  - [Guide for compressed NFTs](https://edge.docs.solana.com/developing/guides/compressed-nfts)
+    (which is based on this repo)
 - Account Compression Program:
   - Documentation - https://spl.solana.com/account-compression
   - Repository -
