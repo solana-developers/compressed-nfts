@@ -500,20 +500,22 @@
   resolved "https://registry.npmjs.org/@metaplex-foundation/cusper/-/cusper-0.0.2.tgz"
   integrity sha512-S9RulC2fFCFOQraz61bij+5YCHhSO9llJegK8c8Y6731fSi6snUSQJdCUqYS8AIgR0TKbQvdvgSyIIdbDFZbBA==
 
-"@metaplex-foundation/js@^0.18.0":
-  version "0.18.3"
-  resolved "https://registry.yarnpkg.com/@metaplex-foundation/js/-/js-0.18.3.tgz#d61d25b9e3ab91d069cd6a87fa9eb5d01ce56ed3"
-  integrity sha512-rqI8vI+V5Bt3pgrv8E7leqR8gxxdw6Q/pbWg4EznbuYSmpNGRQkjMaZE0C+rQrmtQbMqUD9rUsUuYOoppSlI4A==
+"@metaplex-foundation/js@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@metaplex-foundation/js/-/js-0.19.0.tgz#dd1432dc2face412299ae2270fae81b86ca2195e"
+  integrity sha512-slCjTDq1RfX0TQk8XgWYVNa0qwmZ0cVbdmtJK8L5boON+sSNO+IJX8BGi3tO5tWA0O7oOdh00UeY1HAVssjJVA==
   dependencies:
     "@bundlr-network/client" "^0.8.8"
     "@metaplex-foundation/beet" "0.7.1"
     "@metaplex-foundation/mpl-auction-house" "^2.3.0"
+    "@metaplex-foundation/mpl-bubblegum" "^0.6.2"
     "@metaplex-foundation/mpl-candy-guard" "^0.3.0"
     "@metaplex-foundation/mpl-candy-machine" "^5.0.0"
     "@metaplex-foundation/mpl-candy-machine-core" "^0.1.2"
     "@metaplex-foundation/mpl-token-metadata" "^2.8.6"
     "@noble/ed25519" "^1.7.1"
     "@noble/hashes" "^1.1.3"
+    "@solana/spl-account-compression" "^0.1.8"
     "@solana/spl-token" "^0.3.5"
     "@solana/web3.js" "^1.63.1"
     bignumber.js "^9.0.2"
@@ -540,9 +542,9 @@
     "@solana/web3.js" "^1.56.2"
     bn.js "^5.2.0"
 
-"@metaplex-foundation/mpl-bubblegum@^0.6.0":
+"@metaplex-foundation/mpl-bubblegum@^0.6.2":
   version "0.6.2"
-  resolved "https://registry.npmjs.org/@metaplex-foundation/mpl-bubblegum/-/mpl-bubblegum-0.6.2.tgz"
+  resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-bubblegum/-/mpl-bubblegum-0.6.2.tgz#e1b098ccef10899b0d759a03e3d4b1ae7bdc9f0c"
   integrity sha512-4tF7/FFSNtpozuIGD7gMKcqK2D49eVXZ144xiowC5H1iBeu009/oj2m8Tj6n4DpYFKWJ2JQhhhk0a2q7x0Begw==
   dependencies:
     "@metaplex-foundation/beet" "0.7.1"
@@ -587,6 +589,19 @@
     "@metaplex-foundation/cusper" "^0.0.2"
     "@solana/spl-token" "^0.3.6"
     "@solana/web3.js" "^1.66.2"
+
+"@metaplex-foundation/mpl-token-metadata@^2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-token-metadata/-/mpl-token-metadata-2.10.0.tgz#87785d305a23bd68075919ce995b3160408ddedc"
+  integrity sha512-oCAzs4Wl7m+8ZeW6VVX8NDNbMBNDbH0vbysBmY8Eh9Moq0inSjm2dtojzQGEFTpVSAEFEzinRLXtkeWqiiI3ug==
+  dependencies:
+    "@metaplex-foundation/beet" "^0.7.1"
+    "@metaplex-foundation/beet-solana" "^0.4.0"
+    "@metaplex-foundation/cusper" "^0.0.2"
+    "@solana/spl-token" "^0.3.6"
+    "@solana/web3.js" "^1.66.2"
+    bn.js "^5.2.0"
+    debug "^4.3.4"
 
 "@metaplex-foundation/mpl-token-metadata@^2.5.2":
   version "2.8.6"
@@ -715,6 +730,18 @@
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@solana/spl-account-compression/-/spl-account-compression-0.1.7.tgz#d1ac7e6ecb73da7fd66d998334ce1fca47931726"
   integrity sha512-7BKXDpm2rRxmkIWAxq7jm/haRvLp4ZOaM9NMz3+zZtE+z+cWPY9lRKEWdH+RCAWNm1b0J0J+seqwb3hgf79nkA==
+  dependencies:
+    "@metaplex-foundation/beet" "^0.7.1"
+    "@metaplex-foundation/beet-solana" "^0.4.0"
+    bn.js "^5.2.1"
+    borsh "^0.7.0"
+    js-sha3 "^0.8.0"
+    typescript-collections "^1.3.3"
+
+"@solana/spl-account-compression@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@solana/spl-account-compression/-/spl-account-compression-0.1.8.tgz#0c1fd052befddd90c2e8704b0b685761799d4bae"
+  integrity sha512-vsvsx358pVFPtyNd8zIZy0lezR0NuvOykQ29Zq+8oto+kHfTXMGXXQ1tKHUYke6XkINIWLFVg/jDi+1D9RYaqQ==
   dependencies:
     "@metaplex-foundation/beet" "^0.7.1"
     "@metaplex-foundation/beet-solana" "^0.4.0"
