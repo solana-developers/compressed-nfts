@@ -39,9 +39,9 @@ variable to be the **_absolute path_** of your local testing wallet keypair JSON
 
 After setting up locally, I recommend exploring the code of the following files (in order):
 
-1. `./scripts/verboseCreateAndMint.ts`
-2. `./scripts/fetchNFTsByOwner.ts`
-3. `./scripts/transferNFT.ts`
+1. [`./scripts/verboseCreateAndMint.ts`](./scripts/verboseCreateAndMint.ts)
+2. [`./scripts/fetchNFTsByOwner.ts`](./scripts/fetchNFTsByOwner.ts)
+3. [`./scripts/transferNFT.ts`](./scripts/transferNFT.ts)
 
 After reviewing the code, then running each of these scripts in the same order.
 
@@ -57,7 +57,7 @@ Once setup locally, you will be able to run the scripts included within this rep
 yarn demo ./scripts/<script>
 ```
 
-#### `createAndMint.ts`
+#### `scripts/createAndMint.ts`
 
 Performs all the following actions:
 
@@ -65,20 +65,21 @@ Performs all the following actions:
 - create a new NFT collection
 - mint two compressed NFTs (to different addresses)
 
-#### `verboseCreateAndMint.ts`
+#### `scripts/verboseCreateAndMint.ts`
 
-Functionally the same as `createAndMint.ts`. This scripts adds extra console logging and comments
-for explanation purposes.
+Functionally the same as `scripts/createAndMint.ts`. This scripts adds extra console logging and
+comments for explanation purposes.
 
-#### `fetchNFTsByOwner.ts`
+#### `scripts/fetchNFTsByOwner.ts`
 
-Using the ReadApi `fetchAssetsByOwner` method to fetch the NFTs owners by the two addresses.
+Uses the ReadApi `fetchAssetsByOwner` method to fetch the NFTs owners by the two addresses.
 
-#### `fetchNFTsByCollection.ts`
+#### `scripts/fetchNFTsByCollection.ts`
 
-Using the ReadApi `fetchAssetsByGroup` method to fetch the NFTs belonging to the same collection.
+Uses the ReadApi `fetchAssetsByGroup` method to fetch the NFTs belonging to the same collection,
+compressed or otherwise.
 
-#### `transferNFT.ts`
+#### `scripts/transferNFT.ts`
 
 Performs the complete process to transfer a compressed NFTs. Specifically:
 
@@ -87,7 +88,38 @@ Performs the complete process to transfer a compressed NFTs. Specifically:
 - verifying the RPC provided proof on the client side
 - builds the compressed NFT transfer function
 
-#### `mintToCollection.ts`
+#### `scripts/mintToCollection.ts`
+
+Mint additional compressed NFTs into an already existing collection and/or tree.
+
+## Metaplex sdk examples
+
+This repo also contains code examples of how to use the
+[`@metaplex-foundation/js`](https://www.npmjs.com/package/@metaplex-foundation/js) sdk to work with
+compressed NFTs, including reading and transferring them.
+
+After setting up locally, I recommend exploring the code of the following metaplex specific files
+(in order):
+
+1. [`./metaplex/transferNFT.ts`](./metaplex/transferNFT.ts)
+2. [`./metaplex/fetchNFTsByOwner.ts`](./metaplex/fetchNFTsByOwner.ts)
+3. [`./metaplex/simpleProofVerification.ts`](./metaplex/simpleProofVerification.ts)
+
+#### `metaplex/transferNFT.ts`
+
+Transfer a compressed NFT using the metaplex sdk. This method only requires you to know the
+`assetId` of the compressed NFT to transfer.
+
+#### `metaplex/fetchNFTsByOwner.ts`
+
+Uses the ReadApi `fetchAssetsByOwner` method to fetch the NFTs owned by a single address.
+
+#### `metaplex/fetchNFTsByGroup.ts`
+
+Uses the ReadApi `fetchAssetsByGroup` method to fetch the NFTs belonging to the same collection,
+compressed or otherwise.
+
+#### `metaplex/simpleProofVerification.ts`
 
 Mint additional compressed NFTs into an already existing collection and/or tree.
 
@@ -97,7 +129,7 @@ Mint additional compressed NFTs into an already existing collection and/or tree.
   - [State Compression](https://edge.docs.solana.com/learn/state-compression)
   - [Guide for compressed NFTs](https://edge.docs.solana.com/developing/guides/compressed-nfts)
     (which is based on this repo)
-- Account Compression Program:
+- Account Compression SPL Program:
   - Documentation - https://spl.solana.com/account-compression
   - Repository -
     https://github.com/solana-labs/solana-program-library/tree/master/account-compression
