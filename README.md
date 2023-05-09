@@ -101,9 +101,17 @@ compressed NFTs, including reading and transferring them.
 After setting up locally, I recommend exploring the code of the following metaplex specific files
 (in order):
 
-1. [`./metaplex/transferNFT.ts`](./metaplex/transferNFT.ts)
-2. [`./metaplex/fetchNFTsByOwner.ts`](./metaplex/fetchNFTsByOwner.ts)
-3. [`./metaplex/simpleProofVerification.ts`](./metaplex/simpleProofVerification.ts)
+1. [`./metaplex/mintToCollection.ts`](./metaplex/mintToCollection.ts)
+2. [`./metaplex/transferNFT.ts`](./metaplex/transferNFT.ts)
+3. [`./metaplex/fetchNFTsByOwner.ts`](./metaplex/fetchNFTsByOwner.ts)
+4. [`./metaplex/simpleProofVerification.ts`](./metaplex/simpleProofVerification.ts)
+
+#### `metaplex/mintToCollection.ts`
+
+Mint a single compressed NFT to an existing tree and collection, using the metaplex sdk. This
+requires you create your tree and collection ahead of time. See the
+[`./scripts/verboseCreateAndMint.ts`](./scripts/verboseCreateAndMint.ts) script for details on how
+to create a tree and collection.
 
 #### `metaplex/transferNFT.ts`
 
