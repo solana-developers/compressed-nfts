@@ -214,7 +214,7 @@ export class WrapperConnection extends Connection {
         after: after ?? null,
         before: before ?? null,
         limit: limit ?? null,
-        page: page ?? 0,
+        page: page ?? 1,
         sortBy: sortBy ?? null,
       },
     });
@@ -248,7 +248,7 @@ export class WrapperConnection extends Connection {
         after: after ?? null,
         before: before ?? null,
         limit: limit ?? null,
-        page: page ?? 0,
+        page: page ?? 1,
         sortBy: sortBy ?? null,
       },
     });
