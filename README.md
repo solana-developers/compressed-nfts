@@ -15,9 +15,9 @@ million NFT collection:
 
 ## Quick links to learn more
 
-- Solana Docs for [State Compression](https://edge.docs.solana.com/learn/state-compression)
+- Solana Docs for [State Compression](https://docs.solana.com/learn/state-compression)
 - written guide
-  [minting compressed NFTs](https://edge.docs.solana.com/developing/guides/compressed-nfts) (which
+  [minting compressed NFTs](https://docs.solana.com/developing/guides/compressed-nfts) (which
   is based on this repo and also in the Solana Docs)
 
 ## Tech stack of this repo

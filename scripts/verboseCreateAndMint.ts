@@ -147,7 +147,7 @@ let initBalance: number, balance: number;
   console.log("Space to allocate:", numberFormatter(requiredSpace), "bytes");
   console.log("Estimated cost to allocate space:", numberFormatter(storageCost / LAMPORTS_PER_SOL));
   console.log(
-    "Max compressed NFTs for collection:",
+    "Max compressed NFTs for tree:",
     numberFormatter(Math.pow(2, maxDepthSizePair.maxDepth)),
     "\n",
   );
