@@ -84,24 +84,26 @@ dotenv.config();
     symbol: "SSNC",
     // specific json metadata for each NFT
     uri: "https://supersweetcollection.notarealurl/token.json",
+    sellerFeeBasisPoints: 100,
     creators: [
       {
         address: payer.publicKey,
         verified: false,
-        share: 100,
+        share: 99,
+        // share: 100,
       },
       {
         address: testWallet.publicKey,
         verified: false,
-        share: 0,
+        share: 1,
+        // share: 0,
       },
     ],
     editionNonce: 0,
     uses: null,
     collection: null,
     primarySaleHappened: false,
-    sellerFeeBasisPoints: 0,
-    isMutable: false,
+    isMutable: true,
     // values taken from the Bubblegum package
     tokenProgramVersion: TokenProgramVersion.Original,
     tokenStandard: TokenStandard.NonFungible,
