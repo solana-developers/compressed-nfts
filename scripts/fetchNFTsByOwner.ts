@@ -93,6 +93,10 @@ dotenv.config();
   await connection
     .getAssetsByOwner({
       ownerAddress: userAddress.toBase58(),
+      sortBy: {
+        sortBy: "recent_action",
+        sortDirection: "asc",
+      },
     })
     .then(res => {
       console.log("Total assets returned:", res.total);
