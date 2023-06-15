@@ -16,6 +16,8 @@ import {
 import {
   PROGRAM_ID as BUBBLEGUM_PROGRAM_ID,
   MetadataArgs,
+  computeCreatorHash,
+  computeDataHash,
   createCreateTreeInstruction,
   createMintToCollectionV1Instruction,
 } from "@metaplex-foundation/mpl-bubblegum";
@@ -283,11 +285,34 @@ export async function mintCompressedNFT(
   // create an array of instruction, to mint multiple compressed NFTs at once
   const mintIxs: TransactionInstruction[] = [];
 
+  /**
+   * correctly format the metadata args for the nft to mint
+   * ---
+   * note: minting an nft into a collection (via `createMintToCollectionV1Instruction`)
+   * will auto verify the collection. But, the `collection.verified` value inside the
+   * `metadataArgs` must be set to `false` in order for the instruction to succeed
+   */
+  const metadataArgs = Object.assign(compressedNFTMetadata, {
+    collection: { key: collectionMint, verified: false },
+  });
+
+  /**
+   * compute the data and creator hash for display in the console
+   *
+   * note: this is not required to do in order to mint new compressed nfts
+   * (since it is performed on chain via the Bubblegum program)
+   * this is only for demonstration
+   */
+  const computedDataHash = new PublicKey(computeDataHash(metadataArgs)).toBase58();
+  const computedCreatorHash = new PublicKey(computeCreatorHash(metadataArgs.creators)).toBase58();
+  console.log("computedDataHash:", computedDataHash);
+  console.log("computedCreatorHash:", computedCreatorHash);
+
   /*
-    Add a single mint instruction 
+    Add a single mint to collection instruction 
     ---
     But you could all multiple in the same transaction, as long as your 
-    transaction is still within the byte size limits 
+    transaction is still within the byte size limits
   */
   mintIxs.push(
     createMintToCollectionV1Instruction(
@@ -325,9 +350,7 @@ export async function mintCompressedNFT(
         tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
       },
       {
-        metadataArgs: Object.assign(compressedNFTMetadata, {
-          collection: { key: collectionMint, verified: false },
-        }),
+        metadataArgs,
       },
     ),
   );
