@@ -17,8 +17,8 @@ million NFT collection:
 
 - Solana Docs for [State Compression](https://docs.solana.com/learn/state-compression)
 - written guide
-  [minting compressed NFTs](https://docs.solana.com/developing/guides/compressed-nfts) (which
-  is based on this repo and also in the Solana Docs)
+  [minting compressed NFTs](https://solana.com/developers/guides/javascript/compressed-nfts) (which
+  is based on this repo)
 
 ## Tech stack of this repo
 
@@ -147,5 +147,4 @@ Mint additional compressed NFTs into an already existing collection and/or tree.
   - Playground - https://metaplex-read-api.surge.sh/
 - Metaplex Compression examples:
   - https://github.com/metaplex-foundation/compression-read-api-js-examples
-  - Bubblegum program -
-    https://github.com/metaplex-foundation/metaplex-program-library/tree/master/bubblegum
+  - Bubblegum program - https://github.com/metaplex-foundation/mpl-bubblegum
