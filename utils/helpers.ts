@@ -34,7 +34,7 @@ export function loadPublicKeysFromFile(
 }
 
 /*
-  Locally save a demo data to the filesystem for later retrieval
+  Locally save demo data to the filesystem for later retrieval
 */
 export function saveDemoDataToFile(
   name: string,
@@ -66,7 +66,7 @@ export function saveDemoDataToFile(
 }
 
 /*
-  Locally save a PublicKey addresses to the filesystem for later retrieval
+  Locally save PublicKey addresses to the filesystem for later retrieval
 */
 export function savePublicKeyToFile(
   name: string,
@@ -131,7 +131,7 @@ export function saveKeypairToFile(
 ) {
   fileName = path.join(dirName, `${fileName}.json`);
 
-  // create the `dirName` directory, if it does not exists
+  // create the `dirName` directory, if it does not exist
   if (!fs.existsSync(`./${dirName}/`)) fs.mkdirSync(`./${dirName}/`);
 
   // remove the current file, if it already exists
@@ -167,7 +167,7 @@ export function loadOrGenerateKeypair(fileName: string, dirName: string = DEFAUL
 }
 
 /*
-  Compute the Solana explorer address for the various data
+  Compute the Solana explorer address for the various sets of data
 */
 export function explorerURL({
   address,
