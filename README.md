@@ -1,6 +1,6 @@
 # State Compression and Compressed NFTs
 
-At a high level, state compression is a technique in which a off-chain data is secured by the Solana
+At a high level, state compression is a technique in which off-chain data is secured by the Solana
 ledger, using a hashing algorithm to "fingerprint" the _off-chain_ data and storing it inside a
 special _on-chain_ Merkle tree, called a Concurrent Merkle Tree.
 
@@ -29,7 +29,7 @@ million NFT collection:
 
 1. Clone this repo to your local system
 2. Install the packages via `yarn install`
-3. Copy rename the `example.env` file to be named `.env`
+3. Rename the `example.env` file to be named `.env`
 4. Update the `RPC_URL` variable to be the cluster URL of a supporting RPC provider
 
 If you have the Solana CLI installed locally: update the `LOCAL_PAYER_JSON_ABSPATH` environment
@@ -51,7 +51,7 @@ After reviewing the code, then running each of these scripts in the same order.
 
 ### Running the included Scripts
 
-Once setup locally, you will be able to run the scripts included within this repo:
+Once you're setup locally, you will be able to run the scripts included within this repo:
 
 ```
 yarn demo ./scripts/<script>
@@ -67,7 +67,7 @@ Performs all the following actions:
 
 #### `scripts/verboseCreateAndMint.ts`
 
-Functionally the same as `scripts/createAndMint.ts`. This scripts adds extra console logging and
+Functionally the same as `scripts/createAndMint.ts`. This script adds extra console logging and
 comments for explanation purposes.
 
 #### `scripts/fetchNFTsByOwner.ts`
@@ -81,7 +81,7 @@ compressed or otherwise.
 
 #### `scripts/transferNFT.ts`
 
-Performs the complete process to transfer a compressed NFTs. Specifically:
+Performs the complete process to transfer compressed NFTs. Specifically:
 
 - fetching the NFT asset data from the RPC
 - fetching the asset's proof from the RPC
@@ -109,7 +109,7 @@ After setting up locally, I recommend exploring the code of the following metapl
 #### `metaplex/mintToCollection.ts`
 
 Mint a single compressed NFT to an existing tree and collection, using the metaplex sdk. This
-requires you create your tree and collection ahead of time. See the
+requires you to create your tree and collection ahead of time. See the
 [`./scripts/verboseCreateAndMint.ts`](./scripts/verboseCreateAndMint.ts) script for details on how
 to create a tree and collection.
 

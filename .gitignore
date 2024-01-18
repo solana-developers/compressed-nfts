@@ -30,7 +30,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
 # local env files and key files
 .env*
 .env*.local
@@ -39,3 +38,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
